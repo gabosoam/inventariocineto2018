@@ -274,12 +274,19 @@ $(document).ready(function () {
 
 
     function onChange(e) {
+
+        
+
         var code = this.value();
+        
         $('#code2').val(code);
 
+        var valor = code.replace("#", "%26");
+
+      
         $.ajax({
             type: 'GET',
-            url: '/model/' + code,
+            url: '/model/' + valor,
             success: sendData
         });
 

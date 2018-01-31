@@ -54,6 +54,9 @@ router.post('/create', isLoggedIn,function (req, res, next) {
 
 router.post('/createserial', function (req, res, next) {
   var datos = req.body;
+
+ console.log('DETALLE');
+ console.log(datos);
   
   detail.createserial(datos, function(err, data) {
     if (err) {
